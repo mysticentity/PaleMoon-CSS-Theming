@@ -1,0 +1,174 @@
+#roboform-setup description:not(.robo_logo_desc),
+#roboform-setup  label:not(.menu-iconic-text) {
+ color: black;
+}
+#roboform-setup textbox {
+  -moz-appearance: textfield !important;
+  border: 2px solid !important;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow !important;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow !important;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow !important;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow !important;
+  background-color: white !important;
+}
+.robo_logo_desc {
+  color: white;
+}
+#roboform-setup  radio {
+  -moz-appearance: radio-container;
+}
+#roboform-setup  .radio-check-box1 {
+  -moz-appearance: radio;
+}
+#roboform-setup  .button-box{
+  background-image: none !important;
+}
+#roboform-setup  button{
+  -moz-appearance: button;
+  -moz-box-align: center;
+}
+#roboform-setup .button-text {
+  font-weight: normal;
+  margin-left: 11px !important;
+}
+
+#roboform-passgen description,
+#roboform-passgen  label:not(.menu-iconic-text) {
+ color: black;
+}
+#roboform-passgen textbox {
+  -moz-appearance: textfield !important;
+  border: 2px solid !important;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow !important;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow !important;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow !important;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow !important;
+  background-color: white !important;
+}
+#roboform-passgen checkbox {
+  -moz-appearance: checkbox-container;
+}
+#roboform-passgen .checkbox-check {
+  -moz-appearance: checkbox;
+}
+#roboform-passgen .button-box {
+  background-image: none !important;
+}
+#roboform-passgen  button:not(.spinbuttons-button) {
+  -moz-appearance: button;
+  -moz-box-align: center;
+}
+
+#roboform-passgen .button-text {
+  font-weight: normal;
+  margin-left: 11px !important;
+}
+#roboform-passgen .spinbuttons-button {
+  background-image: none !important;
+  width: 13px !important;
+  min-width: 13px;
+  height: 9px !important;
+  min-height: 9px;
+  padding: 0px 0px 0px 2px !important;
+  -moz-box-align: center;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  background-color: ThreeDFace;
+}
+#roboform-passgen  caption {
+  background-image: none !important;
+}
+#roboform-passgen  caption > label{
+  color: navy;
+}
+
+#roboform-options description,
+#roboform-options  label {
+ color: #2c4a56;
+}
+#roboform-options #options_tabpanels_main {
+  background: #062a4e url("chrome://global/skin/brushed.png") repeat left top;
+}
+#roboform-options #options_tabpanels_main tabpanel {
+  background-color: transparent;
+}
+#roboform-options #options_tabpanels_main grid {
+  background-color: transparent;
+}
+#roboform-options button {
+  max-height: 28px;
+  min-height: 28px;
+  padding-left: 11px;
+}
+
+#roboform-login-note groupbox{
+  background-color: transparent !important;
+}
+#roboform-login-note description,
+#roboform-login-note  label:not(.menu-text):not(.menu-iconic-text) {
+ color: black;
+}
+#roboform-login-note textbox {
+  -moz-appearance: textfield !important;
+  border: 2px solid !important;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow !important;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow !important;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow !important;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow !important;
+  background-color: white !important;
+}
+#roboform-login-note .button-box{
+  background-image: none !important;
+}
+#roboform-login-note button{
+  -moz-appearance: button;
+  -moz-box-align: center;
+}
+#roboform-login-note .button-text {
+  font-weight: normal;
+  margin-left: 11px !important;
+}
+#roboform-login-note  #group_caption{
+  font-weight: bold;
+  background-image: none;
+  background-color: #fdfdfd;
+  font-family: tahoma;
+  font-size: 12px;
+  color: #123272;
+}
+#roboform-login-note menulist {
+  background-color: white !important;
+}
+
+#rf-signup-window #signup_mainvbox {
+  background-color: transparent;
+}
+#rf-signup-window #rf_groupbox_signupDlg {
+  background-image: url("chrome://global/skin/brushed.png");
+}
+#rf-signup-window #fakemac_vbox {
+  background-color: rgba(6,42,78,.75);
+}
+#rf-signup-window grid {
+ background-color: transparent;
+}
+#rf-signup-window #error_vbox {
+  background-color: transparent;
+}
+#rf-signup-window #signup_buttons_vbox {
+  background-color: transparent;
+}
+#rf-signup-window #buttons_hbox {
+  background-color: transparent;
+}
+#rf-signup-window #rf_signup_notes_vbox {
+  background-color: transparent;
+}
+#rf-signup-window button {
+  max-height: 28px;
+  min-height: 28px;
+  padding-left: 11px;
+}

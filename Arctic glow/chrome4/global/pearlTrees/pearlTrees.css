@@ -1,0 +1,15 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.BRO_linkButton > .button-box {
+  background-image: none;
+}
+.BRO_linkButton:hover > .button-box {
+  background-image: none;
+}
+.BRO_linkButton:active > .button-box  {
+  background-image: none;
+}
+
+.BRO_linkButton label {
+  text-decoration: underline;
+}

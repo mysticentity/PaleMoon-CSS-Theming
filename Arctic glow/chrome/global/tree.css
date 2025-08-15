@@ -1,0 +1,468 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-2001
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== tree.css ===================================================
+  == Styles used by the XUL outline element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#prefsTree {
+  background-color: #e2eff3 !important;
+}
+#localdirtree,
+#remotedirtree {
+  -moz-appearance: none;
+  background: #e2eff3 url("chrome://global/skin/menu/autocomplete-bg.png") !important;
+}
+#configTree {
+  -moz-appearance: none;
+  background: #e2eff3 none !important;
+}
+
+/* ::::: tree ::::: */
+
+tree {
+  margin: 0px 4px;
+  border: 2px solid;
+  -moz-border-top-colors: #1e7a99 #075b77;
+  -moz-border-right-colors: #1e7a99 #075b77;
+  -moz-border-bottom-colors: #1e7a99 #075b77;
+  -moz-border-left-colors: #1e7a99 #075b77;
+  -moz-appearance: none !important;
+  background: #e2eff3 url("chrome://global/skin/brushed3.png") !important;
+  color: #2c4a56;
+}
+
+/* ::::: tree focusring ::::: */
+
+.focusring > .tree-stack > .tree-rows > .tree-bodybox {
+  border: 1px solid transparent;  
+}
+
+.focusring:focus > .tree-stack > .tree-rows > .tree-bodybox {
+  border: 1px solid #1e7a99;
+}
+
+
+/* ::::: tree rows ::::: */
+
+treechildren::-moz-tree-row {
+  border: 1px solid transparent;
+  min-height: 18px;
+  height: 1.3em;
+}
+
+treechildren::-moz-tree-row(selected) {
+  background-color: #e2eff3;
+}
+
+treechildren::-moz-tree-row(selected) {
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+  color: #2c4a56  !important;
+  border: 0px !important;
+}
+
+treechildren::-moz-tree-row(selected, focus) {
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+  color: #2c4a56 !important;
+  border: 0px !important;
+}
+
+treechildren::-moz-tree-row(current, focus) {
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+  color: #2c4a56  !important;
+  border: 0px !important;
+}
+
+treechildren::-moz-tree-row(selected, current, focus) {
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+  color: #2c4a56 !important;
+  border: 0px !important;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-row,
+tree[seltype="text"] > treechildren::-moz-tree-row {
+  border: none;
+  background-color: transparent;
+}
+
+/* ::::: tree cells ::::: */
+
+treechildren::-moz-tree-cell {
+  padding: 0px 2px 0px 2px;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell-text,
+tree[seltype="text"] > treechildren::-moz-tree-cell-text,
+treechildren::-moz-tree-cell-text {
+  color: #2c4a56;
+}
+
+treechildren::-moz-tree-cell-text(selected) {
+  color: #2c4a56;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell {
+  border: 1px solid transparent;
+  padding: 0px 1px 0px 1px;
+}
+
+tree[seltype="text"] > treechildren::-moz-tree-cell-text {
+  border: 1px solid transparent;
+  padding: 0px 1px 1px 1px;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell(active, selected) {
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+}
+tree[seltype="cell"] > treechildren::-moz-tree-cell-text(active, selected) {
+  color: #2c4a56;
+}
+
+tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected) {
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+  color: #2c4a56 !important;
+}
+
+treechildren::-moz-tree-cell-text(selected, focus) {
+  color: #2c4a56;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell(active, selected, focus) {
+  background-color: transparent !important;
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+}
+
+tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected, focus) {
+  background-color: transparent !important;
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell-text(active, selected, focus) {
+  color: #2c4a56;
+}
+
+tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected, focus) {
+  color: #2c4a56;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell(active, current, focus) {
+  border: 1px dotted #1e7a99;
+}
+
+tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, current, focus) {
+  border: 1px dotted #1e7a99;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell(active, selected, current, focus) {
+  border: 1px dotted #1e7a99;
+}
+
+tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected, current, focus) {
+  border: 1px dotted #1e7a99;
+}
+
+/* ::::: lines connecting cells ::::: */
+/* Windows hasn't used dotted lines for this since XP ...default theme note
+     Arctic Glow, greg b, 2008 ff301
+*/
+treechildren::-moz-tree-line {
+  border: 1px dotted #1e7a99;
+}
+treechildren::-moz-tree-line(selected, focus) {
+  border: 1px dotted #1e7a99;
+}
+
+/* ::::: tree separator ::::: */
+
+treechildren::-moz-tree-separator {
+  border-top: 1px solid #075b77;
+}
+
+
+/* ::::: drop feedback ::::: */
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell-text(primary, dropOn),
+tree[seltype="text"] > treechildren::-moz-tree-cell-text(primary, dropOn),
+treechildren::-moz-tree-cell-text(primary, dropOn) {
+  background-color: #e2eff3;
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+  color: #2c4a56;}
+
+treechildren::-moz-tree-drop-feedback {
+  background-color: #e2eff3;
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+  height: 2px;
+  -moz-margin-start: 5px;
+}
+
+/* ::::: tree progress meter ::::: */
+
+treechildren::-moz-tree-progressmeter {
+  margin: 2px 4px;
+  border: 2px solid;
+  -moz-border-top-colors: #1e7a99 #075b77;
+  -moz-border-right-colors: #1e7a99 #075b77;
+  -moz-border-bottom-colors: #1e7a99 #075b77;
+  -moz-border-left-colors: #1e7a99 #075b77;
+  background-color: #e2eff3;
+  color: #1e7a99;
+}
+
+treechildren::-moz-tree-progressmeter(progressUndetermined) {
+  list-style-image: url("chrome://global/skin/progressmeter/progressmeter-busy.gif");
+}
+
+treechildren::-moz-tree-cell-text(progressmeter) {
+  margin: 2px 4px;
+}
+
+/* ::::: tree columns ::::: */
+
+#unifinder-todo-tree-cols,
+treecol,
+treecolpicker {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  border: 0px solid;
+  border-right: 1px solid #1e7a99 !important;
+  background: url("chrome://global/skin/tree/header.png") repeat-x !important;
+  color: #2c4a56 !important;
+  padding: 3px 4px 2px 4px;
+}
+
+.treecol-image {
+  padding: 0px 1px;
+}
+
+.treecol-text {
+  margin: 0px !important;
+}
+
+treecol[hideheader="true"] {
+  -moz-appearance: none;
+  border: none;
+  padding: 0;
+}
+
+/* ..... internal box ..... */
+
+treecol:hover:active,
+treecolpicker:hover:active {
+  background : url("chrome://global/skin/tree/header-active.png") repeat-x !important;
+  border-right: 1px solid #1e7a99 !important;
+}
+
+#unifinder-todo-tree-cols:hover:active,
+treecol:hover,
+treecolpicker:hover {
+  background : url("chrome://global/skin/tree/header-active.png") repeat-x !important;
+  border-right: 1px solid #1e7a99 !important;
+}
+treecol:hover .treecol-text{
+  color: #2c4a56;	
+}
+
+treecol:hover:active .treecol-text{
+  color: #2c4a56;	
+}
+
+.treecol-image:hover:active {
+  padding: 1px 1px 0px 2px;
+}
+
+/* ::::: column drag and drop styles ::::: */
+
+treecol[dragging="true"] {
+  -moz-border-top-colors: #075b77 transparent !important;
+  -moz-border-right-colors: #075b77 transparent!important;
+  -moz-border-bottom-colors: #075b77 transparent !important;
+  -moz-border-left-colors: #075b77 transparent !important;
+  background-color: #e2eff3 !important;
+  color: #2c4a56 !important;
+}
+
+treecol[insertafter="true"] {
+  -moz-border-right-colors: #1e7a99 #075b77;
+}
+
+treecol[insertbefore="true"] {
+  -moz-border-left-colors: #1e7a99 #075b77;
+}
+
+treechildren::-moz-tree-column(insertbefore) {
+  border-left: 1px solid #1e7a99;
+}
+
+treechildren::-moz-tree-column(insertafter) {
+  border-right: 1px solid #1e7a99;
+}
+
+/* ::::: sort direction indicator :::::  */
+
+.treecol-sortdirection {
+  list-style-image: none;
+}
+
+treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection="ascending"] {
+  list-style-image: url("chrome://global/skin/tree/sort-asc.gif");
+}
+
+treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection="descending"] {
+  list-style-image: url("chrome://global/skin/tree/sort-dsc.gif");
+}
+
+/* ::::: column picker :::::  */
+
+.tree-columnpicker-icon {
+  list-style-image: url("chrome://global/skin/tree/columnpicker.gif");
+}
+
+/* ::::: twisty :::::  */
+
+treechildren::-moz-tree-twisty {
+  -moz-padding-end: 4px;
+  padding-top: 1px;
+  width: 9px; /* The image's width is 9 pixels */
+  list-style-image: url("chrome://global/skin/tree/twisty-clsd.png");
+}
+
+treechildren::-moz-tree-twisty(open) {
+  width: 9px; /* The image's width is 9 pixels */
+  list-style-image: url("chrome://global/skin/tree/twisty-open.png");
+}
+
+treechildren::-moz-tree-indentation {
+  width: 18px;
+}
+
+/* ::::: gridline style ::::: */
+
+treechildren.gridlines::-moz-tree-cell {
+  border-right: 1px solid transparent !important;
+  border-bottom: 1px solid transparent !important;
+}
+
+treechildren.gridlines::-moz-tree-row {
+  border: none;
+}
+
+treechildren::-moz-tree-image(Name) {
+  padding-right: 2px;
+}
+
+.dirTree::-moz-tree-image(open) {
+  list-style-image: url("chrome://global/skin/tree/folder-open.png") !important;
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+.dirTree::-moz-tree-image(open, selected, focus),
+.dirTree::-moz-tree-image(open, selected, current, focus) {
+  list-style-image: url("chrome://browser/skin/icons/folder-open.png") !important;
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+
+.fileTree::-moz-tree-image(isFolder),
+.dirTree::-moz-tree-image(closed) {
+  list-style-image: url("chrome://global/skin/tree/folder-closed.png") !important;
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+.fileTree::-moz-tree-image(isFolder, selected, focus),
+.dirTree::-moz-tree-image(closed, selected, focus),
+.fileTree::-moz-tree-image(isFolder, selected, current, focus),
+.dirTree::-moz-tree-image(closed, selected, current, focus) {
+  list-style-image: url("chrome://browser/skin/icons/folder-closed.png") !important;
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+.fileTree::-moz-tree-image(isLink) {
+  list-style-image: url("chrome://global/skin/tree/favs.png") !important;
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+.fileTree::-moz-tree-image(isLink, selected, focus),
+.fileTree::-moz-tree-image(isLink, selected, current, focus) {
+  list-style-image: url("chrome://global/skin/tree/favs.png") !important;
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+
+treechildren::-moz-tree-image(Name) {
+  padding-right: 0px;
+  margin: 0px 2px;
+  list-style-image: url("chrome://global/skin/tree/favs.png") !important;
+  height: 17px;
+  width: 17px;
+}
+treechildren::-moz-tree-image(Name, container) {
+  list-style-image: url("chrome://global/skin/tree/folder-closed.png") !important;
+}
+treechildren::-moz-tree-image(Name, container, open) {
+  list-style-image: url("chrome://global/skin/tree/folder-open.png") !important;
+}
+treechildren::-moz-tree-image(Name, selected, focus) {
+  list-style-image: url("chrome://browser/skin/icons/favs.png") !important;
+}
+treechildren::-moz-tree-image(Name, container, selected, focus),
+treechildren::-moz-tree-image(Name, container, selected, current, focus) {
+  list-style-image: url("chrome://browser/skin/icons/folder-closed.png") !important;
+}
+treechildren::-moz-tree-image(Name, container, open, selected, focus),
+treechildren::-moz-tree-image(Name, container, open, selected, current, focus) {
+  list-style-image: url("chrome://browser/skin/icons/folder-open.png") !important;
+}
+
+/* ::::: editable tree ::::: */
+
+treechildren::-moz-tree-row(selected, editing) {
+  background-color: transparent;
+  border: none;
+}
+
+treechildren::-moz-tree-cell-text(selected, editing) {
+  color: inherit;
+}
+
+.tree-input {
+  -moz-appearance: none;
+  border: 1px solid Highlight;
+  -moz-border-top-colors: Highlight;
+  -moz-border-bottom-colors: Highlight;
+  -moz-border-left-colors: Highlight;
+  -moz-border-right-colors: Highlight;
+  margin: 0;
+  -moz-margin-start: -4px;
+  padding: 1px;
+}

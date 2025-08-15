@@ -1,0 +1,9 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#fvd_single_short_urls label,
+#fvd_single_short_urls description {
+  color: #2c4a56 !important;
+}
+#fvd_single_search_panel label{
+  color: #2c4a56 !important;
+}

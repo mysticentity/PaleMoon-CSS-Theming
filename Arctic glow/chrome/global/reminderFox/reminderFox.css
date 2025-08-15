@@ -1,0 +1,139 @@
+#oe-date-picker-overlay-box
+{ background: transparent none;
+  border:     2px solid #1e7a99;
+  padding:    1px;
+}
+#oe-date-picker-year-controls-box
+{ border:           1px solid #1e7a99; 
+  background-color: #e2eff3;
+}
+#oe-date-picker-year-title-text
+{ color: #2c4a56;
+}
+#oe-date-picker-today-button
+{ list-style-image: url("chrome://global/skin/reminderFox/calendar-small-today.gif");
+}
+#oe-date-picker-year-previous-button
+{ list-style-image: url("chrome://global/skin/reminderFox/left_arrow-2.png");
+}
+#oe-date-picker-month-previous-button
+{ list-style-image: url("chrome://global/skin/reminderFox/left_arrow.png");
+}
+#oe-date-picker-month-next-button
+{ list-style-image: url("chrome://global/skin/reminderFox/right_arrow.png");
+}
+#oe-date-picker-year-next-button
+{ list-style-image: url("chrome://global/skin/reminderFox/right_arrow-2.png");
+}
+#oe-date-picker-year-grid
+{ border-top :  1px solid #1e7a99; 
+  border-left : 1px solid #1e7a99;
+}
+.oe-date-picker-year-month-box-class
+{ background-color: #e2eff3;
+  border-right:     1px solid #1e7a99; 
+  border-bottom:    1px solid #1e7a99;
+}
+#oe-date-picker-month-days-header-box 
+{ background-color: #e2eff3;
+  margin:           8px 1px 0px 1px;
+  border-top:       1px solid #1e7a99;
+  border-right:     1px solid #1e7a99;
+  border-bottom:    1px solid #1e7a99;
+}
+.oe-date-picker-year-month-box-class[selected="true"]
+{ background: #e2eff3 url("chrome://global/skin/url-hover.png");
+  color:      #e2eff3;
+}
+#oe-date-picker-month-day-1-header-box { border-left: 1px solid #1e7a99; }
+  #oe-date-picker-month-day-2-header-box
+, #oe-date-picker-month-day-3-header-box
+, #oe-date-picker-month-day-4-header-box
+, #oe-date-picker-month-day-5-header-box
+, #oe-date-picker-month-day-6-header-box
+, #oe-date-picker-month-day-7-header-box
+{ border-left: 1px solid #1e7a99;
+  margin-left: -1px;
+}
+  #oe-date-picker-month-day-1-box
+, #oe-date-picker-month-day-8-box
+, #oe-date-picker-month-day-15-box
+, #oe-date-picker-month-day-22-box
+, #oe-date-picker-month-day-29-box
+, #oe-date-picker-month-day-36-box
+{ border-left: 1px solid #1e7a99;
+}
+.oe-date-picker-month-day-box-class
+{ background-color: #e2eff3;
+  border:           none;
+  border-right :    1px solid #1e7a99; 
+  border-bottom :   1px solid #1e7a99;
+}
+  #oe-date-picker-month-day-7-box
+, #oe-date-picker-month-day-14-box
+, #oe-date-picker-month-day-21-box
+, #oe-date-picker-month-day-28-box
+, #oe-date-picker-month-day-35-box
+, #oe-date-picker-month-day-42-box
+{ margin-right: -1px;
+}
+.oe-date-picker-month-day-box-class[reminder="true"]
+{ background: #e2eff3 url("chrome://global/skin/url-hover.png");
+  color:      #e2eff3;
+}
+  .oe-date-picker-month-day-box-class[selectedReminder="true"]
+, .oe-date-picker-month-day-box-class[selected="true"]
+{ border: 1px solid red;
+}
+.oe-date-picker-year-month-box-class:hover
+{ background: #e2eff3 url("chrome://global/skin/url-hover.png");
+}
+.oe-date-picker-month-day-box-class:hover
+{ background: #e2eff3 url("chrome://global/skin/url-hover.png");
+}
+.rmQSearchBox
+{ background: transparent none !important;
+  border: none !important;
+}
+#rmSearchText, #rmFilterText
+{ border: none !important;
+}
+#editRemindersWindow toolbarbutton:hover
+{ border: 1px solid transparent;
+}
+#editRemindersWindow #qsChange
+{ list-style-image:  url("chrome://global/skin/button/search-dropmarker.png");
+  -moz-image-region: rect(0px 32px 24px 0px);
+  padding:           0px;
+  margin:            0px;
+}
+#editRemindersWindow #qsChange:hover
+{ -moz-image-region: rect(24px 32px 48px 0px);
+}
+#editRemindersWindow #qsChange:active
+{ -moz-image-region: rect(48px 32px 72px 0px);
+}
+#editRemindersWindow #qsChange dropmarker
+{ list-style-image: none !important;
+}
+#editRemindersWindow #rmSearchText .quick-search-textbox
+{ border:           1px solid #1e7a99;
+  background-color: #e2eff3;
+  color:            #2c4a56;
+}
+#reminderFox-reminderOptionsDialog #notesToggle
+{ list-style-image: url("chrome://global/skin/tree/file.png");
+}
+  #reminderFox-reminderOptionsDialog #datepickerToggle
+, #reminderFox-reminderOptionsDialog #datepickerEndToggle
+{ list-style-image: url("chrome://global/skin/reminderFox/calendar-small.gif");
+}
+#reminderFox-reminderOptionsDialog  #catChange
+{ list-style-image: url("chrome://global/skin/tree/folder-closed.png");
+}
+#reminderFox-quickAlarmDialog #notesToggle
+{ list-style-image: url("chrome://global/skin/tree/file.png");
+}
+#reminderFox-quickAlarmDialog #datepickerToggle
+{ list-style-image: url("chrome://global/skin/reminderFox/calendar-small.gif");
+}

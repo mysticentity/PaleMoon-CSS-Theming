@@ -1,0 +1,61 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/*** Duplicate Tab Toolbar Button ***/
+#duplicatetab-duptab-button {
+  list-style-image: url('chrome://global/skin/duplicatetab/duplicatetab.png')!important;
+  -moz-image-region: rect(0px 34px 34px 0px)!important;
+  -moz-box-orient: vertical;
+}
+#duplicatetab-duptab-button:hover {
+  -moz-image-region: rect(34px 34px 68px 0px)!important;
+}
+#duplicatetab-duptab-button:hover:active {
+  -moz-image-region: rect(68px 34px 102px 0px)!important;
+}
+#duplicatetab-duptab-button[disabled="true"] {
+  -moz-image-region: rect(102px 34px 136px 0px) !important;
+}
+
+toolbar[iconsize="small"] #duplicatetab-duptab-button {
+  list-style-image: url("chrome://global/skin/duplicatetab/duplicatetab-small.png") !important;
+  -moz-image-region: rect(0px 28px 28px 0px) !important;
+}
+toolbar[iconsize="small"] #duplicatetab-duptab-button:hover {
+  -moz-image-region: rect(28px 28px 56px 0px) !important;
+}
+toolbar[iconsize="small"] #duplicatetab-duptab-button:hover:active {
+  -moz-image-region: rect(56px 28px 84px 0px) !important;
+}
+toolbar[iconsize="small"] #duplicatetab-duptab-button[disabled="true"] {
+  -moz-image-region: rect(84px 28px 112px 0px) !important;
+}
+
+/***  Duplicate Tab To New Window Toolbar Button ***/
+#duplicatetab-duptab-win-button {
+  list-style-image: url('chrome://global/skin/duplicatetab/duplicatetab-win.png')!important;
+  -moz-image-region: rect(0px 34px 34px 0px)!important;
+  -moz-box-orient: vertical;
+}
+#duplicatetab-duptab-win-button:hover {
+  -moz-image-region: rect(34px 34px 68px 0px)!important;
+}
+#duplicatetab-duptab-win-button:hover:active {
+  -moz-image-region: rect(68px 34px 102px 0px)!important;
+}
+#duplicatetab-duptab-win-button[disabled="true"] {
+  -moz-image-region: rect(102px 34px 136px 0px) !important;
+}
+
+toolbar[iconsize="small"] #duplicatetab-duptab-win-button {
+  list-style-image: url("chrome://global/skin/duplicatetab/duplicatetab-small-win.png") !important;
+  -moz-image-region: rect(0px 28px 28px 0px) !important;
+}
+toolbar[iconsize="small"] #duplicatetab-duptab-win-button {
+  -moz-image-region: rect(28px 28px 56px 0px) !important;
+}
+toolbar[iconsize="small"] #duplicatetab-duptab-win-button:hover:active {
+  -moz-image-region: rect(56px 28px 84px 0px) !important;
+}
+toolbar[iconsize="small"] #duplicatetab-duptab-win-button[disabled="true"] {
+  -moz-image-region: rect(84px 28px 112px 0px) !important;
+}

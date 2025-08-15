@@ -1,0 +1,145 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#addons-button {
+  list-style-image: url("chrome://browser/skin/icons/addons.png") !important;
+  -moz-image-region: rect(0px 34px 34px 0px) !important;
+}
+#addons-button:hover {
+  -moz-image-region: rect(34px 34px 68px 0px) !important;
+}
+#addons-button:active {
+  -moz-image-region: rect(102px 34px 136px 0px) !important;
+}
+#addons-button[disabled="true"] {
+  -moz-image-region: rect(68px 34px 102px 0px) !important;
+}
+
+#multipanel-button {
+  list-style-image: url("chrome://browser/skin/icons/multipanel.png") !important;
+  -moz-image-region: rect(0px 34px 34px 0px) !important;
+}
+#multipanel-button:hover {
+  -moz-image-region: rect(34px 34px 68px 0px) !important;
+}
+#multipanel-button:active {
+  -moz-image-region: rect(102px 34px 136px 0px) !important;
+}
+#multipanel-button[disabled="true"] {
+  -moz-image-region: rect(68px 34px 102px 0px) !important;
+}
+
+#pageinfo-button {
+  list-style-image: url("chrome://browser/skin/icons/pageinfo.png") !important;
+  -moz-image-region: rect(0px 34px 34px 0px) !important;
+}
+#pageinfo-button:hover {
+  -moz-image-region: rect(34px 34px 68px 0px) !important;
+}
+#pageinfo-button:active {
+  -moz-image-region: rect(102px 34px 136px 0px) !important;
+}
+#pageinfo-button[disabled="true"] {
+  -moz-image-region: rect(68px 34px 102px 0px) !important;
+}
+
+toolbar[iconsize="small"] #addons-button {
+  list-style-image: url("chrome://browser/skin/icons/small/addons-sm.png") !important;
+  -moz-image-region: rect(0px 28px 28px 0px) !important;
+}
+toolbar[iconsize="small"] #addons-button:hover {
+  -moz-image-region: rect(28px 28px 56px 0px) !important;
+}
+toolbar[iconsize="small"] #addons-button:active {
+  -moz-image-region: rect(56px 28px 84px 0px) !important;
+}
+toolbar[iconsize="small"] #addons-button[disabled="true"] {
+  -moz-image-region: rect(84px 28px 112px 0px) !important;
+}
+
+toolbar[iconsize="small"] #multipanel-button {
+  list-style-image: url("chrome://browser/skin/icons/small/multipanel-sm.png") !important;
+  -moz-image-region: rect(0px 28px 28px 0px) !important;
+}
+toolbar[iconsize="small"] #multipanel-button:hover {
+  -moz-image-region: rect(28px 28px 56px 0px) !important;
+}
+toolbar[iconsize="small"] #multipanel-button:active {
+  -moz-image-region: rect(56px 28px 84px 0px) !important;
+}
+toolbar[iconsize="small"] #multipanel-button[disabled="true"] {
+  -moz-image-region: rect(84px 28px 112px 0px) !important;
+}
+
+toolbar[iconsize="small"] #pageinfo-button {
+  list-style-image: url("chrome://browser/skin/icons/small/pageinfo-sm.png") !important;
+  -moz-image-region: rect(0px 28px 28px 0px) !important;
+}
+toolbar[iconsize="small"] #pageinfo-button:hover {
+  -moz-image-region: rect(28px 28px 56px 0px) !important;
+}
+toolbar[iconsize="small"] #pageinfo-button:active {
+  -moz-image-region: rect(56px 28px 84px 0px) !important;
+}
+toolbar[iconsize="small"] #pageinfo-button[disabled="true"] {
+  -moz-image-region: rect(84px 28px 112px 0px) !important;
+}
+
+#aios-sbhtoolbar > #autohide-button {
+  list-style-image: url("chrome://global/skin/aios/autohide.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+#aios-sbhtoolbar > #autohide-button:hover {
+  -moz-image-region: rect(16px 16px 32px 0px);
+}
+#aios-sbhtoolbar > #autohide-button:hover:active {
+  -moz-image-region: rect(32px 16px 48px 0px);
+}
+
+#aios-sbhtoolbar > #paneltab-button {
+  list-style-image: url("chrome://global/skin/aios/paneltab.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+#aios-sbhtoolbar > #paneltab-button:hover {
+  -moz-image-region: rect(16px 16px 32px 0px);
+}
+#aios-sbhtoolbar > #paneltab-button:hover:active {
+  -moz-image-region: rect(32px 16px 48px 0px);
+}
+
+#places-toolbar > #viewButton {
+  list-style-image: url("chrome://global/skin/aios/view.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+#places-toolbar > #viewButton:hover {
+  -moz-image-region: rect(16px 16px 32px 0px);
+}
+#places-toolbar > #viewButton:hover:active {
+  -moz-image-region: rect(32px 16px 48px 0px);
+}
+
+#downloadManager > #search > #clearListButton {
+  list-style-image: url("chrome://global/skin/aios/clearList.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+#downloadManager > #search > #clearListButton:hover {
+  -moz-image-region: rect(16px 16px 32px 0px);
+}
+#downloadManager > #search > #clearListButton:hover:active {
+  -moz-image-region: rect(32px 16px 48px 0px);
+}
+
+#aios-sidebar-mitem-prefs {
+  list-style-image: url("chrome://global/skin/aios/view.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+#aios-sidebar-mitem-hide {
+  list-style-image: url("chrome://global/skin/icons/close.png") !important;
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+
+#sidebars-titlebutton > label {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+  background: transparent url("chrome://global/skin/arrow/arrow-dn.gif") no-repeat right 8px !important;
+}

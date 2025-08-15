@@ -1,0 +1,25 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+#sbSimilarWebSidebar menuitem:hover {
+  background-image: none;
+}
+#sbSimilarWebSidebar label {
+  color: black;
+}
+
+#similarweb-similarsites-popup_light label {
+  color: black;
+}
+#similarweb-similarsites-popup_light description {
+  color: black;
+}
+#similarweb-similarsites-popup_light .reviewsBody {
+  color: black;
+}
+#similarweb-similarsites-popup_light menuitem {
+  background: white none;
+}
+#similarweb-similarsites-popup_light menuitem:hover {
+  background: white none;
+}

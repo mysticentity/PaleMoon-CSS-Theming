@@ -1,0 +1,166 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-2001
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== listbox.css =======================================================
+  == Styles used by XUL listbox-related elements.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: listbox ::::: */
+
+listbox {
+  -moz-appearance: none;
+  margin: 2px 4px;
+  border: 1px solid ;
+  background-color: #e2eff3;
+  color: #2c4a56;
+}
+
+listbox[disabled="true"] {
+  color: #6f8188;
+}
+
+/* ::::: listitem ::::: */
+
+listitem {
+  border: 1px solid transparent;
+}
+
+listbox:focus > listitem[selected="true"][current="true"] {
+  outline: 1px dotted #1e7a99;
+}
+
+listbox:focus > listitem[current="true"] {
+  outline: 1px dotted #1e7a99;
+  outline-offset: -1px;
+}
+
+listitem[selected="true"] {
+  background: #5ba9c4 url("chrome://global/skin/url-hover.png");
+  color: #2c4a56;
+}
+
+listbox:focus > listitem[selected="true"] {
+  background: #5ba9c4 url("chrome://global/skin/url-hover.png");
+  color: #2c4a56;
+}
+
+/* ::::: listheader ::::: */
+
+listheader {
+  border-top: 1px solid #1e7a99;
+  border-right: 1px solid #1e7a99;
+  border-left: 1px solid #1e7a99;
+  background: #e2eff3 url("chrome://global/skin/tree/header.png") repeat-x left top;
+  color: #2c4a56;
+}
+
+listheader[sortable="true"]:hover:active {
+  background: #5ba9c4 url("chrome://global/skin/url-hover.png");
+}
+
+.listheader-icon {
+  -moz-margin-end: 2px;
+}
+
+.listheader-label {
+  margin: 0px !important;
+}
+
+/* ..... sort direction icon ..... */
+
+.listheader-sortdirection {
+  list-style-image: none;
+}
+
+.listheader-sortdirection[sortDirection="ascending"] {
+  list-style-image: url("chrome://global/skin/tree/sort-asc.png");
+}
+
+.listheader-sortdirection[sortDirection="ascending"]:-moz-system-metric(windows-classic) {
+  list-style-image: url("chrome://global/skin/tree/sort-asc-classic.png");
+}
+
+.listheader-sortdirection[sortDirection="descending"] {
+  list-style-image: url("chrome://global/skin/tree/sort-dsc.png");
+}
+
+.listheader-sortdirection[sortDirection="descending"]:-moz-system-metric(windows-classic) {
+  list-style-image: url("chrome://global/skin/tree/sort-dsc-classic.png");
+}
+
+/* ::::: listcell ::::: */
+
+.listitem-iconic {
+  background-color: transparent !important;
+}
+.listcell-label {
+  margin: 0px !important;
+  padding-top: 0px;
+  padding-bottom: 1px;
+  -moz-padding-start: 4px;
+  -moz-padding-end: 0px;
+  white-space: nowrap;
+}
+
+.listcell-icon {
+  -moz-margin-end: 2px;
+}
+
+.listcell-label[disabled="true"] {
+  color: #6f8188;
+}
+
+/* ::::: listcell checkbox ::::: */
+
+.listcell-check {
+  width: 16px;
+  height: 16px;
+  list-style-image: url("chrome://global/skin/checkbox/unchecked.png");
+}
+.listcell-check[disabled="true"] {
+  list-style-image: url("chrome://global/skin/checkbox/unchecked-dis.png");
+}
+
+.listcell-check[checked="true"] {
+  list-style-image: url("chrome://global/skin/checkbox/checked.png");
+}
+.listcell-check[checked="true"][disabled="true"] {
+  list-style-image: url("chrome://global/skin/checkbox/checked-dis.png");
+}
