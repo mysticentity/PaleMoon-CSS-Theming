@@ -1,8 +1,0 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-.foxytunes-statusbar-arrow-button.right {
-  list-style-image: url("chrome://global/skin/foxytunes/arrowRight.png");
-}
-.foxytunes-statusbar-arrow-button.left {
-  list-style-image: url("chrome://global/skin/foxytunes/arrowLeft.png");
-}
