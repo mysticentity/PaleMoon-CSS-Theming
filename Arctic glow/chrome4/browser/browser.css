@@ -566,67 +566,46 @@ toolbar[iconsize="small"] #bookmarks-menu-button[disabled="true"]:not(.bookmark-
 
 /* Pale Moon download indicator button */
 /* Base downloads button */
-/* Pale Moon download indicator button */
 #downloads-button {
   list-style-image: url("chrome://browser/skin/icons/downloads.png") !important;
-  -moz-image-region: rect(34px 34px 68px 0px) !important; /* Normal */
+  min-width: 34px;
+  min-height: 34px;
+  border: none;
+  margin-top: 1px;
+  display: -moz-box; /* or flex, depending on Pale Moon version */
+  -moz-image-region: rect(0px, 34px, 34px, 0px) !important; /* Normal */
 }
 
-#downloads-button:hover {
-  -moz-image-region: rect(68px 34px 102px 0px) !important; /* Hover */
-}
-
-#downloads-button:active {
-  -moz-image-region: rect(68px 34px 102px 0px) !important; /* Active */
-}
-
-/* Progress, attention, and paused states don't have extra sprites, so reuse hover/active */
-#downloads-button[progress] {
-  -moz-image-region: rect(68px 34px 102px 0px) !important;
-}
-
-#downloads-button[attention] {
-  -moz-image-region: rect(68px 34px 102px 0px) !important;
-}
-
-#downloads-button[paused] {
-  -moz-image-region: rect(68px 34px 102px 0px) !important;
-}
-
-/* Normal toolbar button icon */
-#downloads-button > .toolbarbutton-icon {
+/* Icon and state styling */
+#downloads-indicator-icon {
   list-style-image: url("chrome://browser/skin/icons/downloads.png") !important;
-  -moz-image-region: rect(0px 34px 34px 0px) !important;
+  min-width: 34px;
+  min-height: 34px;
+  -moz-image-region: rect(0px, 34px, 34px, 0px) !important; /* Normal */
 }
 
-/* Hover */
-#downloads-button:hover > .toolbarbutton-icon {
-  -moz-image-region: rect(34px 34px 68px 0px) !important;
+#downloads-button:hover,
+#downloads-indicator:hover {
+  -moz-image-region: rect(34px, 34px, 68px, 0px) !important; /* Hover */
 }
 
-/* Active (clicked) */
-#downloads-button:active > .toolbarbutton-icon {
-  -moz-image-region: rect(68px 34px 102px 0px) !important;
+#downloads-button:active,
+#downloads-indicator:active {
+  -moz-image-region: rect(68px, 34px, 102px, 0px) !important; /* Active */
 }
 
-/* Progress state */
-#downloads-button[progress] > .toolbarbutton-icon {
-  -moz-image-region: rect(102px 34px 136px 0px) !important;
-}
-
-/* Attention state (finished) */
-#downloads-button[attention] > .toolbarbutton-icon {
-  -moz-image-region: rect(136px 34px 170px 0px) !important;
-}
-
-/* Paused */
-#downloads-button[paused] > .toolbarbutton-icon {
-  -moz-image-region: rect(170px 34px 204px 0px) !important;
+/* Optional: finished/attention state */
+#downloads-indicator[attention] {
+  -moz-image-region: rect(102px, 34px, 136px, 0px) !important;
 }
 
 .toolbarbutton-menubutton-dropmarker {
   list-style-image: url("chrome://browser/skin/icons/dropmarker.png");
   -moz-image-region: rect(0px 34px 34px 0px);
+}
+
+.bookmark-item > .toolbarbutton-menu-dropmarker {
+  display: none;
 }
 
 /* Pale Moon history menu button */
@@ -640,48 +619,49 @@ toolbar[iconsize="small"] #bookmarks-menu-button[disabled="true"]:not(.bookmark-
 #history-menu-button:active {
   -moz-image-region: rect(102px 34px 136px 0px);
 }
-
-#window-controls {
-  margin-inline-start: 4px;
-}
-
-#minimize-button,
-#restore-button,
-#close-button {
-  list-style-image: url("chrome://global/skin/icons/windowControls.png");
+/*
+#titlebar-min,
+#titlebar-max,
+#titlebar-close {
+  list-style-image: url("chrome://global/skin/icons/windowControls.png") !important;
+  min-width: 16px;
+  min-height: 16px;
   padding: 0;
+  border: none;
+  background: none !important;
+  -moz-appearance: none !important;
 }
 
-#minimize-button {
+#titlebar-min {
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
-#minimize-button:hover {
+#titlebar-min:hover {
   -moz-image-region: rect(16px, 16px, 32px, 0);
 }
-#minimize-button:hover:active {
+#titlebar-min:active {
   -moz-image-region: rect(32px, 16px, 48px, 0);
 }
-#restore-button {
+
+
+#titlebar-max {
   -moz-image-region: rect(0, 32px, 16px, 16px);
 }
-#restore-button:hover {
+#titlebar-max:hover {
   -moz-image-region: rect(16px, 32px, 32px, 16px);
 }
-#restore-button:hover:active {
+#titlebar-max:active {
   -moz-image-region: rect(32px, 32px, 48px, 16px);
 }
-#close-button {
+
+#titlebar-close {
   -moz-image-region: rect(0, 48px, 16px, 32px);
-  -moz-appearance: none;
-  border-style: none;
-  margin: 2px;
 }
-#close-button:hover {
+#titlebar-close:hover {
   -moz-image-region: rect(16px, 48px, 32px, 32px);
 }
-#close-button:hover:active {
+#titlebar-close:active {
   -moz-image-region: rect(32px, 48px, 48px, 32px);
-}
+}*/
 
 /* cut button */
 
