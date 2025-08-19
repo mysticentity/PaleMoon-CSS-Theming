@@ -1,0 +1,31 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: scale ::::: */
+
+.scale-slider {
+  background: transparent url("chrome://global/skin/scrollbar/scale-sliderH.png") repeat-x left center;
+  margin: 2px 4px;
+  width: 100px;
+}
+.scale-slider[orient="vertical"] {
+  background: transparent url("chrome://global/skin/scrollbar/scale-sliderV.png") repeat-y center top;
+  margin: 4px 2px;
+  width: auto;
+  height: 100px;
+}
+
+/* ::::: scale thumb ::::: */
+
+.scale-thumb {
+  -moz-appearance: none;
+  background: transparent url("chrome://global/skin/scrollbar/scaleThumbH.png") no-repeat center center;
+  min-width: 30px;
+  min-height: 21px;
+}
+.scale-thumb[orient="vertical"] {
+  -moz-appearance: none;
+  background: transparent url("chrome://global/skin/scrollbar/scaleThumbV.png") no-repeat center center;
+  min-width: 21px;
+  min-height: 30px;
+}
+

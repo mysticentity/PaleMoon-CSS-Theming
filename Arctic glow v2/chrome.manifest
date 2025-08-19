@@ -1,0 +1,4 @@
+skin  browser        arcticglow  chrome/browser/       appversion>4.0b7
+skin  communicator   arcticglow  chrome/communicator/  appversion>4.0b7
+skin  global         arcticglow  chrome/global/        appversion>4.0b7
+skin  mozapps        arcticglow  chrome/mozapps/       appversion>4.0b7

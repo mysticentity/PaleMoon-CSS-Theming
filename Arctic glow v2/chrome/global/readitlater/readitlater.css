@@ -1,0 +1,18 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* RIL_filter html|*.textbox-input in texbox.css */
+
+#RIL_sort {
+  background-color: #FFF;
+  border-color: #7f9db9;
+}
+#RIL_sort label {
+  color: #000;  
+}
+#RIL_sort > .menulist-dropmarker {
+  background-image: none;
+  -moz-appearance: menulist-button;
+}
+#RIL_sort_items label {
+  color: #2c4a56;
+}

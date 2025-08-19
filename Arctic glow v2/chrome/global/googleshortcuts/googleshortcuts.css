@@ -1,0 +1,43 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.GSSettings215RC label {
+  color: #2c4a56 !important;
+}
+
+.GSSettings215RC treerow {
+  background-color: #e2eff3 !important;
+}
+
+#GSSettings216RC .link {
+  color: #2c4a56;
+  text-decoration: underline;
+}
+
+#GSSettings216RC #leftTree,
+#GSSettings216RC #rightTree {
+  background: white url("chrome://global/skin/bg-inverse.png") repeat left top;
+}
+#GSSettings216RC #leftTree > treechildren::-moz-tree-cell-text,
+#GSSettings216RC #rightTree > treechildren::-moz-tree-cell-text {
+  color: black;
+}
+#GSSettings216RC #leftTree > treechildren::-moz-tree-row(selected), 
+#GSSettings216RC #rightTree > treechildren::-moz-tree-row(selected) {
+  background-color: #D2E3FF;
+}
+#GSSettings216RC #leftTree > treechildren::-moz-tree-row(odd),
+#GSSettings216RC #rightTree > treechildren::-moz-tree-row(odd) {
+  background-color: #F5F5F5;
+}
+#GSSettings216RC #leftTree > treechildren::-moz-tree-row(odd, selected),
+#GSSettings216RC #rightTree > treechildren::-moz-tree-row(odd, selected) {
+  background-color: #D2E3FF;
+}
+#GSSettings216RC #leftTree > treechildren::-moz-tree-cell-text(selected),
+#GSSettings216RC #rightTree > treechildren::-moz-tree-cell-text(selected) {
+  color: black;
+}
+#GSSettings216RC #leftTree > treechildren::-moz-tree-cell-text(odd, selected),
+#GSSettings216RC #rightTree > treechildren::-moz-tree-cell-text(odd, selected) {
+  color: black;
+}

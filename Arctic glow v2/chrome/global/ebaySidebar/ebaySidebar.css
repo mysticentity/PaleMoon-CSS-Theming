@@ -1,0 +1,49 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.gs-ebay-search-textbox {
+  background-color: white;
+}
+.gs-ebay-search-button {
+  background-image: none;
+}
+.gs-ebay-search-button > .button-box {
+  background-image: none;
+}
+#gs-ebay-sidebar-signin-content > #greeting-widget > .content > label {
+  color: #525252;
+}
+.gs-ebay-sidebar-tab-label {
+  color: #525252;
+}
+#gs-ebay-sidebar-signin-content menupopup {
+  background: white none;
+}
+#gs-ebay-sidebar-signin-content menuitem {
+  background: white none;
+}
+#gs-ebay-sidebar-signin-content menuitem label {
+  color: #525252;
+}
+#gs-ebay-sidebar-signin-content menuitem[type="radio"] {
+  list-style-image: none;
+  -moz-appearance: radiomenuitem;
+}
+menuitem[type="radio"] > .menu-iconic-left {
+  list-style-image: none;
+  -moz-appearance: menuradio;
+  padding-top: 0px;
+}
+.empty-list-message {
+  color: #525252 !important;
+}
+.gs-ebay-button-text {
+  color: #3D3D3D;
+}
+.gs-ebay-refresh-bar-label {
+  color: #4E4E4E !important;
+}
+
+#ebayOptions .link {
+  color: #2c4a56 !important;
+  text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<bindings id="globalBindings"
+   xmlns="http://www.mozilla.org/xbl"
+   xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   xmlns:xbl="http://www.mozilla.org/xbl">
+
+  
+<!-- ::::::::: Scrollbars ::::::::::-->
+
+  <binding id="thumb-vertical" extends="chrome://global/content/bindings/scrollbar.xml#thumb">
+    <content orient="vertical">
+      <xul:box class="thumb-topcap"/>
+		  <xul:box flex="1" class="thumb-vertical-body" orient="vertical" />
+      <xul:box class="thumb-bottomcap"/>
+    </content>
+  </binding>
+
+  <binding id="thumb-horizontal" extends="chrome://global/content/bindings/scrollbar.xml#thumb">
+    <content>
+      <xul:box class="thumb-startcap"/>
+      <xul:box flex="1" class="thumb-horizontal-body" />
+      <xul:box class="thumb-endcap"/>
+    </content>
+  </binding>
+  
+</bindings>   

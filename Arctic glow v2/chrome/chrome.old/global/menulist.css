@@ -1,0 +1,442 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-1999
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== menulist.css ===================================================
+  == Styles used by the XUL menulist element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* :::::::::: menulist :::::::::: */
+
+menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+  color: #2c4a56;
+}
+
+.menulist-label-box {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  margin: 1px;
+}
+
+.menulist-label-box,
+menulist[open="true"]:focus > .menulist-label-box {
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #2c4a56;
+  -moz-box-align: center;
+}
+
+.menulist-icon[src] {
+  margin: 0px 2px 0px 2px;
+}
+
+.menulist-label {
+  margin-top: 0 !important;
+  -moz-margin-end: 0 !important;
+  margin-bottom: 0 !important;
+  -moz-margin-start: 1px !important;
+}
+
+.menulist-description {
+  font-style: italic;
+  color: #535d61;
+  -moz-margin-start: 1ex !important;
+}
+
+/* ..... dropmarker ..... */
+
+menulist[disabled="true"]:hover:active > .menulist-dropmarker {
+  -moz-border-top-colors: #075b77 #1e7a99;
+  -moz-border-right-colors: #075b77 #1e7a99;
+  -moz-border-bottom-colors: #075b77 #1e7a99;
+  -moz-border-left-colors: #075b77 #1e7a99;
+  padding: 1px;
+}
+
+menulist:hover:active > .menulist-dropmarker {
+  -moz-border-top-colors: #1e7a99 #075b77;
+  -moz-border-right-colors: #1e7a99 #075b77;
+  -moz-border-bottom-colors: #1e7a99 #075b77;
+  -moz-border-left-colors: #1e7a99 #075b77;
+  padding-top: 2px;
+  padding-bottom: 0px;
+  -moz-padding-start: 2px;
+  -moz-padding-end: 0px;
+}
+
+/* ..... focused state ..... */
+
+menulist:focus > .menulist-label-box {
+  background-color: transparent !important;
+  background-image : url("chrome://global/skin/url-hover.png") !important;
+  color: #2c4a56;
+}
+
+/* ..... disabled state ..... */
+
+menulist[disabled="true"] {
+  background-color: #e2eff3;
+  color: #535d61;
+}
+
+/* ::::: editable menulists ::::: */
+
+.menulist-editable-box {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  -moz-padding-start: 2px;
+  -moz-padding-end: 0px;
+  color: #2c4a56;
+}
+
+html|*.menulist-editable-input {
+  margin: 0px !important;
+  border: none !important;
+  padding: 0px !important;
+  font: inherit;
+  background-color: #e2eff3;
+  color: #2c4a56;
+}
+
+/* ::::: compact menulists ::::: */
+
+.menulist-compact {
+  -moz-appearance: none;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  margin: 0;
+  -moz-border-top-colors: #1e7a99 #075b77;
+  -moz-border-right-colors: #075b77 #1e7a99;
+  -moz-border-bottom-colors: #075b77 #1e7a99;
+  -moz-border-left-colors: #1e7a99 #075b77;
+  background-color: #075b77;
+  color: ButtonText;
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+}
+
+.menulist-compact > .menulist-label-box > .menulist-label {
+  margin: 0 3px !important;
+  text-align: right;
+}  
+
+.menulist-compact > .menulist-label-box > .menulist-icon {
+  -moz-margin-start: 2px;
+}
+
+.menulist-compact[open="true"] {
+  -moz-border-top-colors: #075b77 #1e7a99;
+  -moz-border-right-colors: #075b77 #1e7a99;
+  -moz-border-bottom-colors: #075b77 #1e7a99;
+  -moz-border-left-colors: #075b77 #1e7a99;
+}
+
+.menulist-compact[disabled="true"] {
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif");
+}
+
+.menulist-compact:focus > .menulist-label-box {
+  border: 1px dotted;
+  background-color: transparent;
+  color: inherit;
+}
+/* page setup,  print preview */
+#hLeftOption,
+#hCenterOption,
+#hRightOption,
+#fLeftOption,
+#fCenterOption,
+#fRightOption,
+#print-preview-toolbar > hbox > #scale{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+#availableLanguages,
+#signingCA,
+#modelist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#unknownContentType menulist {
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #dfd2b7 !important;
+}
+
+#surfcanyon-prefs #m1{
+  -moz-appearance: none !important;
+  min-width: 50px;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+  text-align: right;
+}
+
+/* Fire Gestures */
+#wheelGestureU,
+#wheelGestureD,
+#rockerGestureL,
+#rockerGestureR,
+#keypressGestureC,
+#keypressGestureS{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* Down Them All */
+#DownThemAll menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+#DownThemAll menulist > .menulist-editable-box > html|*.menulist-editable-input{
+  color: #2c4a56 !important;
+}
+
+/* Webmail Notifier */
+#wmn-hosts{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;  
+}
+/* FireScribe  */
+#firstrowtoolbar #font-menu{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* Sage Settings */
+#winMain #select-menu,
+#winMain #feedItemOrder,
+#winMain #feedDiscoveryMode{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+/* Adblock Plus */
+#abpPreferencesWindow #listEditor{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#abpEditSubscription  #title{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* noscript */
+#noscriptOptions #sel-allowHttpsOnly{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#adblockfilters-options  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+/* fire.fm */
+#firefm-pref-notifications{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+/* speed dial */
+#SpeedDialPreferences menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* foxy proxy */
+#foxyproxyoptions2 menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* foxclocks */
+#foxclocks-options menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#zotero-prefs menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+  min-width: 85px;
+}
+#zotero-export-options menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#zotero-editpane-type-menu{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#zotero-advanced-search-dialog menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+  min-width: 85px;
+}
+#pref-tabmix menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+  min-width: 85px;
+}
+#foxmarks-settings menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+  min-width: 85px;
+}
+#foxsaver-preference-window menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+  min-width: 85px;
+}
+#twitternotifier-login menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+  min-width: 85px;
+}
+#ShowcasePreferences menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#ff-options menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#PDFDownload_Options menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#avSettingsDialog menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#gspace-window menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#gspace_optGSpace  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#StudioLDPreferencesWindow   menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#dwhelper-preferences  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#brief-options2  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#isRitL-settings  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#febeoptionsID  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#userdefinedbuwindow  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#autopagerPage  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#autopager  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#ybSidebarPanel  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#ybookmarks_OptionsWindow  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#adblockfilters-options  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#lincomp_settings_dialog  menulist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}

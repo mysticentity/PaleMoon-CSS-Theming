@@ -1,0 +1,404 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-1999
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== global.css =====================================================
+  == Styles that apply everywhere.
+  =======================================================================  */
+
+/* all localizable skin settings shall live here */
+@import url("chrome://global/locale/intl.css");
+@import url("chrome://global/skin/formatting.css");
+@import url("chrome://global/skin/foxytunes/foxytunes.css");
+@import url("chrome://global/skin/inspector.css");
+@import url("chrome://global/skin/console/console.css");
+@import url("chrome://global/skin/sidebar.css");
+@import url("chrome://global/skin/fireftp.css");
+@import url("chrome://global/skin/menu.css");
+@import url("chrome://global/skin/fonts-glowy.css");
+@import url("chrome://global/skin/duplicatetab/duplicatetab.css");
+@import url("chrome://global/skin/dta/style.css");
+@import url("chrome://global/skin/aios/aios.css");
+@import url("chrome://global/skin/reminderFox/reminderFox.css");
+@import url("chrome://global/skin/roboform/roboform.css");
+@import url("chrome://global/skin/adblockplus/adblockplus.css");
+@import url("chrome://global/skin/downloadStatusbar/downloadStatusbar.css");
+@import url("chrome://global/skin/SimilarWeb/SimilarWeb.css");
+@import url("chrome://global/skin/googleshortcuts/googleshortcuts.css");
+@import url("chrome://global/skin/netVideoHunter/netVideoHunter.css");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: XBL bindings ::::: */
+
+radio {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#radio");
+}
+
+menulist > menupopup,
+.menulist-menupopup {
+  -moz-binding: url("chrome://global/content/bindings/popup.xml#popup-scrollbars");
+}
+
+.menulist-compact {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#menulist-compact");
+}
+
+progressmeter[mode="undetermined"] {
+  -moz-binding: url("chrome://global/content/bindings/progressmeter.xml#progressmeter-undetermined");
+}
+
+/* ::::: root elements ::::: */
+
+window,
+page,
+wizard,
+prefwindow {
+  -moz-appearance: none;
+  background: #e2eff3 url("chrome://global/skin/redblack.gif");
+  color: #2c4a56;
+  font: message-box;
+}
+#accountSetup wizardpage {
+  background: #56061d url("chrome://global/skin/redblack.gif");
+}
+#accountSetup .wizard-buttons {
+  background: #56061d url("chrome://global/skin/redblack.gif");
+}
+wizardpage > vbox,
+.windowDialog,
+dialog {
+  background: #e2eff3 url("chrome://global/skin/brushed.png") !important;
+  color: #2c4a56 !important;
+  font: message-box;
+}
+JSConsoleWindow{
+  background: #e2eff3 url("chrome://global/skin/info-bg2.jpg");
+}
+window.dialog {
+  background: #e2eff3 url("chrome://global/skin/brushed.png") !important;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  -moz-padding-start: 8px;
+  -moz-padding-end: 10px;
+}
+#SecurityWarnings,
+#ConnectionsDialog,
+#OCSPDialog,
+#AdvancedJSDialog,
+#FontsDialog,
+#ColorsDialog,
+#LanguagesDialog,
+#SanitizeDialog,
+#CustomizeToolbarWindow,
+#SoundNotificationsDialog,
+#zotero-about{
+  padding: 0px !important;
+}
+#zotero-about #aboutcontent{
+  background-color: #e2eff3 !important;
+}
+#SoundNotificationsDialog #soundUrlLocation{
+  -moz-appearance: none !important;
+}
+#soundUrlLocation > .fileFieldContentBox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#zotero-pane{
+  background: #e2eff3 url("chrome://global/skin/brushed.png") !important;
+}
+#performancing-main-hbox{
+  background: #e2eff3 url("chrome://global/skin/brushed.png") !important;
+  padding: 0px;
+}
+#performancing-editor-page > hbox{
+  background-color:  #e2eff3 !important;
+}
+#performancing-account-wizard > .wizard-page-box{
+  background: #e2eff3 url("chrome://global/skin/brushed.png") !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+#performancing-account-wizard > .wizard-buttons > .wizard-buttons-box-1{
+  background: #e2eff3 url("chrome://browser/skin/preferences/pref-bg.png") !important;  
+  margin: 0px !important;
+  padding: 0px !important;
+}
+#performancing-account-wizard textbox,
+#performancing-blogservice-custom-list{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+.ffheader-box {
+  -moz-appearance: none !important;
+  height: 75px !important;
+  border-bottom: 2px groove #075b77 !important;
+  margin: 0px !important;
+  -moz-padding-start: 10px !important;
+  background: url("chrome://browser/skin/preferences/pref-bg.png") repeat-x !important;
+  color: #2c4a56 !important;
+}
+.ff-footer {
+  background: url("chrome://browser/skin/preferences/pref-bg.png") repeat-x;
+  padding-top: 8px;
+  -moz-padding-start: 8px;
+  -moz-padding-end: 10px;
+  padding-bottom: 5px;
+}
+#foxyproxyoptions2{
+  -moz-appearance: none !important;
+  background: #e2eff3 url("chrome://global/skin/brushed.png") !important;
+}
+
+#DownThemAll{
+  -moz-appearance: none !important;
+  background: #e2eff3 url("chrome://global/skin/brushed.png") !important;
+}
+
+#CustomizeToolbarWindow label{
+  color: #2c4a56;
+}
+[wait-cursor] {
+  cursor: wait !important;
+}
+
+/* ::::: alert icons :::::*/
+
+.message-icon,
+.alert-icon,
+.error-icon,
+.question-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.message-icon {
+  list-style-image: url("chrome://global/skin/icons/Message.png");
+}
+
+.alert-icon {
+  list-style-image: url("chrome://global/skin/icons/Warning.png");
+}
+
+.error-icon {
+  list-style-image: url("chrome://global/skin/icons/Error.png");
+}
+
+.question-icon {
+  list-style-image: url("chrome://global/skin/icons/Question.png");
+}
+
+/* ::::: iframe ::::: */
+
+iframe {
+  border: none;
+  width: 100px;
+  height: 100px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+/* ::::: statusbar ::::: */
+
+statusbar {
+  -moz-appearance: none !important;
+  background-image: url("chrome://global/skin/toolbar/stat-bar2.png") !important;
+  border-top: 1px solid #1e7a99;
+  border-left: 1px solid #1e7a99;
+  border-right: 1px solid #075b77;
+  border-bottom: 1px solid #075b77;
+  padding-left: 15px;
+  background-color: #e2eff3;
+  min-height: 22px;
+}
+
+statusbarpanel {
+  -moz-appearance : none !important;
+  background-image: url("chrome://global/skin/toolbar/stat-bar2.png") !important;
+  background-color: #e2eff3 !important;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  border-top: 0px solid;
+  border-bottom: 0px solid;
+  padding: 0px 4px;
+}
+
+.statusbar-resizerpanel {
+  -moz-appearance : none !important;
+  background-image: url("chrome://global/skin/toolbar/stat-bar2.png") !important;
+  background-color: #e2eff3 !important;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  border-top: 0px solid;
+  border-bottom: 0px solid;
+  padding: 0px 4px;
+}
+
+.statusbarpanel-iconic,  .statusbarpanel-iconic-text, .statusbarpanel-menu-iconic {
+  padding: 0px 1px 0px 1px;
+}
+
+#zotero-status-bar-icon{
+  background-image: url("chrome://global/skin/toolbar/stat-bar3.png") !important;;
+}
+#FoxSaverStatusBarIcon{
+  background-image: url("chrome://global/skin/toolbar/stat-bar3.png") !important;;
+}
+
+resizer[dir="bottomright"] {
+  -moz-appearance: none;
+  width: 17px;
+  height: 17px;
+  background-image: url("chrome://global/skin/scrollbar/resizer.png");
+  cursor: se-resize;
+}
+
+/* XXXBlake yeah, shoot me -- these don't belong here.  I'll move them later. */
+
+/*
+sidebarheader {
+  background: transparent url('chrome://global/skin/toolbar/sbheader-background.png') repeat-x left top;
+  -moz-appearance: none;
+  border-bottom: 1px solid #1e7a99;
+  border-top: 1px solid #075b77;
+}
+
+sidebarheader > label {
+  -moz-padding-start: 4px;
+}
+*/
+/* ::::: miscellaneous ::::: */
+
+.toolbar-focustarget {
+  -moz-user-focus: ignore !important;
+}
+
+/* :::::: autoscroll popup ::::: */
+
+#autoscroller {
+  height: 28px;
+  width: 28px;
+  border: none;
+  margin: -14px;
+  padding: 0;
+  background-image: url("chrome://global/skin/icons/autoscroll.png");
+  background-color: transparent;
+  background-position: right top;
+  -moz-appearance: none;
+}
+
+#autoscroller[scrolldir="NS"] {
+  background-position: right center;
+}
+
+#autoscroller[scrolldir="EW"] {
+  background-position: right bottom;
+}
+
+/* ::::: Read It Later - Offline List ::::: */
+#isRitL-offlineList {
+  background-color: #e2eff3 !important;
+  color: #2c4a56 !important;
+} 
+ #isRitL-offlineList-rows > row {
+  background-color: #e2eff3 !important;
+  color: #2c4a56 !important;
+}
+
+#aboutDialog #modes #clientBox description,
+#aboutDialog #modes #clientBox label {
+  color: #000000 !important;
+}
+#pref-tabmix #TM_ButtonBox label {
+  color: #545454;
+}
+
+#dwhelper-sites-tabbox treechildren {
+  background-image: url("chrome://global/skin/bg-inverse.png");
+}
+#dwhelper-media-sites treechildren::-moz-tree-cell-text {
+  color: black;
+}
+
+#foxmarks-settings .paneSelector > radio > label {
+  color: white;
+}
+#foxmarks-settings .paneSelector > radio[pane][selected="true"] > label {
+  color: black;
+}
+
+#antFlvPlayerWindow #player_controls .button-box {
+  background-image: none;
+}
+
+.gmanager-link {
+  color: #2c4a56 !important;
+  text-decoration: underline;
+}
+
+.colorzilla-link {
+  color: #2c4a56 !important;
+  text-decoration: underline;
+}
+
+#MouseControlOpts #main {
+  background: transparent none;
+}
+#MouseControlOpts groupbox {
+  background-color: rgba(226,239,243,.75);
+}
+
+#aboutMenuedit description,
+#aboutMenuedit label {
+  color: black;
+}
+#aboutMenuedit tab {
+  -moz-appearance: tab;
+}
+#aboutMenuedit tabpanels {
+  background: white none;
+}
+#aboutMenuedit button {
+  background-image: none;
+  -moz-appearance: button;
+  -moz-box-align: center;
+}
+#aboutMenuedit .button-box {
+  background-image: none;
+}

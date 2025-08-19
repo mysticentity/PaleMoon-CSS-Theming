@@ -1,0 +1,8 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#notProxySetup label {
+  color: #2c4a56;
+}
+.PhTabpanels .link {
+  color: #2c4a56;
+}
