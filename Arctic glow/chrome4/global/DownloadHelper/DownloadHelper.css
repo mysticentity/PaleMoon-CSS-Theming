@@ -1,1 +1,0 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");#dwhelper-sites-tabbox tree{  background-image: url("chrome://global/skin/bg-inverse.png");}#dwhelper-media-sites treechildren::-moz-tree-cell-text {  color: black;}

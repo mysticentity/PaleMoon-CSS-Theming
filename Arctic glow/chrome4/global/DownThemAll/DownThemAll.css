@@ -1,9 +1,0 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-#DownThemAll #serverLimits {
-  border: 1px solid #1e7a99;
-}
-
-#DownThemAll statusbarpanel {
-  -moz-appearance: none !important;
-}

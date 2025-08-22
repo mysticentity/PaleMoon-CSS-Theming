@@ -1,6 +1,0 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-#integratedgmail-options-dialog {
-  min-width: 700px;
-  min-height: 500px;
-}
