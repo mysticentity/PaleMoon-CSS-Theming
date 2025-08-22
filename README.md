@@ -5,4 +5,4 @@ Link to any original sources are quite hard to find online so what you see here 
 Of course I have made some changes to the original source to get it to work with pale moon but most of what used to be there is still left.
 
 ![Pale Moon Theme example 1](https://i.imgur.com/dcx6pQe.jpeg)
-![Pale Moon Theme example 2](https://i.imgur.com/dcx6pQe.jpeg)
+![Pale Moon Theme example 2](https://i.imgur.com/6e7tTdx.jpeg)
