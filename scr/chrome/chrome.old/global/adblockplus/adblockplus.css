@@ -1,0 +1,34 @@
+#abpPreferencesWindow treechildren {
+  background-image: url("chrome://global/skin/bg-inverse.png");
+}
+#abpPreferencesWindow treechildren::-moz-tree-row {
+  background: transparent none;
+}
+#abpPreferencesWindow treechildren::-moz-tree-row(selected) {
+  background-color: #316ac5;
+}
+#abpPreferencesWindow treechildren::-moz-tree-cell-text {
+  color: #000000;  
+}
+#abpPreferencesWindow treechildren::-moz-tree-cell-text(col-filter, description-true, selected-false) {
+	color: #808080;
+}
+#abpPreferencesWindow treechildren::-moz-tree-cell-text(col-filter, filter-true, type-whitelist, selected-false) {
+	color: #008000;
+}
+#abpPreferencesWindow treechildren::-moz-tree-cell-text(col-filter, filter-true, type-elemhide, selected-false) {
+	color: #000080;
+}
+#abpPreferencesWindow treechildren::-moz-tree-cell-text(col-filter, filter-false, subscription-upgradeRequired-true, selected-false) {
+	color: #FF0000;
+}
+#abpPreferencesWindow treechildren::-moz-tree-row(filter-true, filter-disabled-true, selected-false),
+#abpPreferencesWindow treechildren::-moz-tree-row(subscription-disabled-true, selected-false) {
+	background-color: #E0E0E0;
+}
+#abpPreferencesWindow treechildren::-moz-tree-cell-text(col-filter, filter-true, type-comment, selected-false) {
+	color: #808080;
+}
+#abpPreferencesWindow treechildren::-moz-tree-cell-text(col-filter, filter-true, type-invalid, selected-false) {
+	color: #C00000;
+}

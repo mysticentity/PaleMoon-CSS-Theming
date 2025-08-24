@@ -1,0 +1,224 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-1999
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== button.css =====================================================
+  == Styles used by the XUL button element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* :::::::::: button :::::::::: */
+button {
+  -moz-appearance: none;
+  margin: 0px 5px;
+  margin-right: 12px;
+  min-width: 6.3em;
+  border: 0px;
+  background: url("chrome://global/skin/button/startcap.png") no-repeat center left transparent;
+  color: #2c4a56;
+  font-family: tahoma;
+  font-weight: normal;
+  height: 28px;
+  padding-left: 11px;
+  list-style-position: inside;
+}
+
+/* Right Endcap and body*/
+.button-box {
+  border: 0px;
+  padding: 0px;
+  background: url("chrome://global/skin/button/endcap.png") no-repeat center right transparent;
+  padding-right: 11px;
+  min-height: 28px;
+}
+#at_welcome > #container .button-box {
+  background: none;
+}
+
+/*Button Body*/
+.button-text {
+  text-align: center;
+  font-weight: bold;
+/*get rid of extra margin from labels; make compatible with default theme*/
+  margin: 0px !important;
+}
+
+/* .......... focused state .......... */
+
+/*startcap:focus*/
+button:focus {
+  background: url("chrome://global/skin/button/startcap-focus.png") no-repeat center left transparent;
+}
+
+/*right endcap:focus*/
+button:focus > .button-box {
+  background: url("chrome://global/skin/button/endcap-focus.png") no-repeat center right transparent;
+}
+
+/* :::::::::: default state ::::::::::  */
+
+/* startcap:default */
+button[default="true"] {
+  background: url("chrome://global/skin/button/startcap-active.png") no-repeat center left transparent;
+  color: #2c4a56;
+}
+
+/*right endcap:default*/
+button[default="true"] > .button-box {
+  background: url("chrome://global/skin/button/endcap-active.png") no-repeat center right transparent;
+}
+
+/* :::::::::: active state :::::::::: */
+
+/*left endcap:active */
+button:hover:active {
+  background: url("chrome://global/skin/button/startcap-active.png") no-repeat center left transparent;
+}
+
+/*right endcap:active*/
+button:hover:active > .button-box {
+  background: url("chrome://global/skin/button/endcap-active.png") no-repeat center right transparent;
+}
+
+/* :::::::::: hover state ::::::::::  */
+
+/*startcap:hover*/
+button:hover {
+  background: url("chrome://global/skin/button/startcap-focus.png") no-repeat center left transparent;
+}
+
+/*right endcap:hover*/
+button:hover > .button-box {
+  background: url("chrome://global/skin/button/endcap-focus.png") no-repeat center right transparent;
+}
+
+
+
+/* .......... disabled state .......... */
+
+/*left endcap:disabled */
+button[disabled="true"] {
+  color: #2c4a56;
+  background: url("chrome://global/skin/button/startcap-disabled.png") no-repeat center left transparent !important;
+}
+
+/*right endcap*/
+button[disabled="true"] > .button-box {
+  background: url("chrome://global/skin/button/endcap-disabled.png") no-repeat center right transparent !important;
+}
+
+/* ::::: menu/menu-button buttons ::::: */
+
+button[type="menu-button"] {
+  -moz-appearance: none !important;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  margin: 0;
+  border: none;
+}
+
+.button-menu-dropmarker,
+.button-menubutton-dropmarker {
+  margin: 1px;
+  background-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+  min-width:11px;
+  min-height:11px;
+}
+  
+.button-menu-dropmarker[disabled="true"],
+.button-menubutton-dropmarker[disabled="true"] {
+  background-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif");
+}
+
+.button-menubutton-dropmarker[open="true"] {
+  margin: 2px 0px 0px 2px;
+}
+
+/* ::::: plain buttons ::::: */
+
+button.plain {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+button[type="disclosure"] {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  -moz-appearance: none;
+  list-style-image: url("chrome://global/skin/tree/twisty-clsd.png");
+  min-width: 0px !important;
+  background-color: transparent;
+}
+
+button[type="disclosure"][open="true"] {
+  list-style-image: url("chrome://global/skin/tree/twisty-open.png"); 
+}
+#ebayCompanionSidebar button,
+#ebayCompanionSidebar .button-box,
+#ebayCompanionSidebar button:focus > .button-box {
+  -moz-appearance: button !important;
+  padding: 0px !important;
+  margin: -2px 0px -2px 0px !important;
+  background-image: none !important;
+  background-color: ThreeDFace !important;
+  color: ButtonText !important;
+}
+
+#speMenuBtn {
+  background-image: url("chrome://global/skin/button/svdPwdMenu.png"); 
+}
+#speMenuBtn:hover {
+  background-image: url("chrome://global/skin/button/svdPwdMenu-focus.png"); 
+}
+#speMenuBtn .button-menubutton-button { 
+  background: transparent url("chrome://global/skin/button/svdPwdNew.png") no-repeat center center; 
+}
+#speMenuBtn .button-menubutton-button:hover { 
+  background: transparent url("chrome://global/skin/button/svdPwdNew-focus.png") no-repeat center center; 
+}
+#speMenuBtn .button-box {
+  background-image: none;
+}
+#speMenuBtn .button-menubutton-dropmarker {
+  -moz-appearance: none;
+  border: none;
+  background-color: transparent;
+  background-image: none;
+}

@@ -1,0 +1,509 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-2001
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== textbox.css ==================================================
+  == Styles used by the XUL textbox element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* ::::: textbox ::::: */
+
+textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+textbox[empty="true"] {
+  color: #535d61;
+}
+
+html|*.textbox-input, 
+html|*.textbox-textarea {
+  margin: 0px !important;
+  border: none !important;
+  padding: 0px !important;
+  background-color: transparent;
+  color: #2c4a56;
+}
+#roboform-setup  html|*.textbox-input, 
+#roboform-setup  html|*.textbox-textarea {
+  color: black !important;
+}
+#roboform-passgen  html|*.textbox-input, 
+#roboform-passgen  html|*.textbox-textarea {
+  color: black !important;
+}
+#roboform-login-note  html|*.textbox-input, 
+#roboform-login-note  html|*.textbox-textarea {
+  color: black !important;
+}
+#similarweb-similarsites-popup_light  textbox {
+  background-color: transparent !important;
+}
+#similarweb-similarsites-popup_light  html|*.textbox-input,
+#similarweb-similarsites-popup_light html|*.textbox-textarea {
+  background-color: transparent;
+  color: black;
+}
+#ebayCompanionSidebar html|*.textbox-input,
+#ebayCompanionSidebar html|*.textbox-textarea {
+  background-color: transparent;
+  color: black;
+}
+
+.textbox-input-box menupopup {
+  cursor: default;
+}
+
+/* ..... readonly state ..... */
+
+textbox[readonly="true"] {
+  background-color: #e2eff3;
+  color: #2c4a56;
+}
+
+/* ..... disabled state ..... */
+
+textbox[disabled="true"] {
+  cursor: default;
+  background-color: #e2eff3;
+  color: #535d61;
+} 
+
+/* ::::: plain textbox ::::: */
+
+textbox.plain {
+  -moz-appearance: none !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: none !important;
+}
+/* ::::: search textbox ::::: */
+
+.textbox-search-icon {
+  list-style-image: url(chrome://browser/skin/Search-glass.png);
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+/* ::::: textboxes inside toolbarpaletteitems ::::: */
+
+toolbarpaletteitem > toolbaritem > textbox > .textbox-input-box > html|*.textbox-input {
+  visibility: hidden;
+}
+
+#PermissionsDialog #url,
+#networkProxyHTTP,
+#networkProxySSL,
+#networkProxyFTP,
+#networkProxyGopher,
+#networkProxySOCKS,
+#networkProxyNone,
+#networkProxyAutoconfigURL ,
+#locationTextBox,
+#loginTextbox,
+#serviceURL,
+#device_name,
+#device_path,
+#extensionsManager #searchfield{
+  -moz-appearance: none !important;
+  background: url("chrome://browser/skin/bookmarks/bm-startcap.png") transparent left center no-repeat !important;
+  padding: 5px;
+  border: none;
+  min-height: 22px;
+}
+#PermissionsDialog #url > .textbox-input-box,
+#networkProxyHTTP > .textbox-input-box,
+#networkProxySSL > .textbox-input-box,
+#networkProxyFTP > .textbox-input-box,
+#networkProxyGopher > .textbox-input-box,
+#networkProxySOCKS > .textbox-input-box,
+#networkProxyNone > .textbox-input-box,
+#networkProxyAutoconfigURL > .textbox-input-box,
+#locationTextBox  > .textbox-input-box,
+#loginTextbox > .textbox-input-box,
+#serviceURL > .textbox-input-box,
+#device_name > .textbox-input-box,
+#device_path > .textbox-input-box,
+#extensionsManager #searchfield > .textbox-input-box {
+  background: url("chrome://browser/skin/bookmarks/bm-endcap.png") transparent right center no-repeat !important;
+  min-height: 22px;
+  padding: 5px;
+}
+#networkProxyHTTP_Port,
+#networkProxySSL_Port,
+#networkProxyFTP_Port,
+#networkProxyGopher_Port,
+#networkProxySOCKS_Port{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#gestureName,
+#gestureScript,
+#gestureDirection,
+#filterLabel,
+#filterTest,
+#tfText1,
+#scalingInput,
+#topInput,
+#rightInput,
+#bottomInput,
+#leftInput,
+#pageNumber{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+#bookmarkproperties textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#DownThemAll textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+#chatzilla-window textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#Console2Window #TextboxFilter{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;  
+}
+
+/* Webmail Notifier */
+#wmn-pref textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+/* FireScribe */
+
+#performancing-editor-subject,
+#performancing-search-notes-text,
+#tag-container > #input-tags,
+#pff-post-time-year,
+#pff-post-time-month,
+#pff-post-time-day,
+#pff-post-time-hour,
+#pff-post-time-minute,
+#performancing-technorati-tags,
+#performancing-technorati-extrainfo,
+#performancing-trackback-textbox,
+#custom-ping-urls,
+#ads-username,
+#ads-password,
+#performancing-technorati-srchtechnorati,
+#performancing-delicious-login-username,
+#performancing-delicious-login-password,
+#performancing-settings-blogthis-template{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+#performancing-settings-panel-ftp textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+/* sage */
+#pageImport > hbox > #txtImportFile{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+  color: #2c4a56 !important;
+}
+#pageSagePanel > .plain > #barSearch > #txtSearchValue{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* Sage Settings */
+#winMain #txtUserCssPath,
+#winMain #updateCheckTimeout,
+#winMain #autoCheckFeedsInterval,
+#winMain #cacheExpireDays,
+#winMain #txtUriSchemeOthers,
+#winMain #txtSbmAddUrl,
+#winMain #value1,
+#winMain #value2{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+/* Adblock */
+#filterall  #root-vbox  #filter{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+#adblockPreferencesWindow #entryarea > #newfilter{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* Adblock Plus */
+#abpEditSubscription  #location{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#adblockfilters-options{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+
+/* noscript */
+#noscriptOptions textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* speed dial */
+#SpeedDialPreferences textbox,
+#editGroupDialog textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* foxy proxy */
+#foxyproxyoptions2 textbox,
+#foxyproxyaddproxydlg2 textbox,
+#foxyproxypatterndlg2 textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* foxclocks */
+#foxclocks-options textbox,
+#fc-foxclocks textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+/* minimap */
+#geoflock-pref-window textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#changemp textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#removemp textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#commonDialog #password1Container > #password1Textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#zotero-prefs textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#zotero-pane textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#zotero-tb-search{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#zotero-note-window textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#zotero-advanced-search-dialog textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#pref-tabmix textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#foxmarks-settings textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#foxsaver-preference-window textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#twitternotifier-login textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#ShowcasePreferences textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#ff-options textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+  color: #56382c !important;
+}
+#ff-profiles textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#ff-search textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#PDFDownload_Options textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#avSettingsDialog  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#gspace-window  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#gspace_optGSpace  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#StudioLDPreferencesWindow  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#dwhelper-preferences  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#brief-options2  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#brief-style-editor  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#isRitL-settings  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#febeoptionsID  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#userdefinedbuwindow  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#autopagerPage  textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#autopager textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#ybSidebarPanel textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#ybookmarks_OptionsWindow textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#lincomp_settings_dialog textbox{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#start-station-input-artist{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #dfd2b7 !important;
+}
+#ebayCompanionSidebar textbox {
+  -moz-appearance: textfield !important;
+  color: #010101 !important;
+}

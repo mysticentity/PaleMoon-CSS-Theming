@@ -1,0 +1,59 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#downbarHolder {
+  background: #e2eff3 url("chrome://global/skin/toolbar/stat-bar.png") repeat-x left top;
+}
+
+#downbarprefs {
+  background: #e2eff3 url("chrome://global/skin/redblack.gif") repeat left top;
+}
+
+#aboutdownbar description{
+  color: black;
+}
+
+#aboutdownbar label{
+  color: black;
+}
+
+#aboutdownbar  tab {
+  -moz-appearance: tab;
+  margin-top: 2px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-left: 2px solid;
+  border-bottom: 1px solid ThreeDHighlight;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 1px 4px 2px 4px;
+  background-color: -moz-Dialog;
+}
+#aboutdownbar  tab label{
+  color: -moz-DialogText;
+}
+#aboutdownbar  tabpanels {
+  -moz-appearance: tabpanels; 
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  padding: 8px;
+  background: -moz-Dialog none;
+}
+
+#aboutdownbar button {
+  -moz-appearance: button;
+  -moz-box-align: center;
+}
+#aboutdownbar .button-box {
+  background-image: none;
+}
+
+#downbarHolder .db_buttonText {
+  color: black;
+}

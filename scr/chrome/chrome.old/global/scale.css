@@ -1,0 +1,46 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: scale ::::: */
+
+.scale-slider {
+  -moz-appearance: scale-horizontal;
+  background: url("chrome://global/skin/scale/scale-tray-horiz.gif") 0% 50% repeat-x;
+  margin: 2px 4px;
+  width: 100px;
+}
+
+.scale-slider[orient="vertical"]
+{
+  -moz-appearance: scale-vertical;
+  background: url("chrome://global/skin/scale/scale-tray-vert.gif") 50% 0% repeat-y;
+  margin: 4px 2px;
+  width: auto;
+  height: 100px;
+}
+
+/* ::::: scale thumb ::::: */
+
+.scale-thumb {
+  -moz-appearance: scalethumb-horizontal;
+  border: 2px solid;
+  -moz-border-top-colors: #075b77 #1e7a99;
+  -moz-border-right-colors: #075b77 #1e7a99;
+  -moz-border-bottom-colors: #075b77 #1e7a99;
+  -moz-border-left-colors: #075b77 #1e7a99;
+  background-color: #e2eff3;
+  min-width: 30px;
+  min-height: 15px;
+}
+
+.scale-thumb[orient="vertical"] {
+  -moz-appearance: scalethumb-vertical;
+  min-width: 15px;
+  min-height: 30px;
+}
+
+.scale-thumb[disabled="true"] {
+  -moz-border-top-colors: #1e7a99 #075b77 !important;
+  -moz-border-right-colors: #075b77 #1e7a99 !important;
+  -moz-border-bottom-colors: #075b77 #1e7a99 !important;
+  -moz-border-left-colors: #1e7a99 #075b77 !important;
+}

@@ -1,0 +1,31 @@
+/*
+     This file is for...
+    *  the Advanced Fonts Dialog as opened by Preferences > Content > Font & Colours > Advanced
+    Greg (glowplug) FF3 Sep 2008
+*/
+
+#selectLangs,
+#defaultFontType,
+#sizeVar,
+#serif,
+#sans-serif,
+#monospace,
+#sizeMono,
+#minSize,
+#DefaultCharsetList
+{
+  -moz-appearance: none !important;
+  background-color: #e2eff3 !important;
+  border: 1px solid #1e7a99 !important;
+}
+#sizeVar,
+#sizeMono
+{
+  min-width: 50px;
+  text-align: right;
+}
+#minSize
+{
+  min-width: 70px;
+  text-align: right;
+}
