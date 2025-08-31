@@ -18,6 +18,6 @@ A good majority of the original files are there including some of the png files,
 2. Open Containing folder startcap for the button being hidden/non existant specifically here. Looks fine other places.
 3. URL bar should mimic the search bar and have a transparent background and not this white/off-white color.
 
-![Pale Moon Issues 1](https://www.reddit.com/media?url=https%253A%252F%252Fpreview.redd.it%252Fissue-with-buttons-v0-sty3lq95dplf1.jpg)
+![Pale Moon Issues 1](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fissue-with-buttons-v0-sty3lq95dplf1.jpg%3Fwidth%3D302%26format%3Dpjpg%26auto%3Dwebp%26s%3D09f65718cee4d5f77f3888a791ad27eb6d94d486)
 ![Pale Moon issues 2](https://www.reddit.com/media?url=https%253A%252F%252Fpreview.redd.it%252Fissue-with-buttons-v0-cajxnqs5dplf1.jpg)
 ![Pale Moon issues 3](https://www.reddit.com/media?url=https%253A%252F%252Fpreview.redd.it%252Fissue-with-buttons-v0-2mxgx6n6dplf1.jpg)
