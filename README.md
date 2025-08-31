@@ -6,3 +6,18 @@ Of course I have made some changes to the original source to get it to work with
 
 ![Pale Moon Theme example 1](https://i.imgur.com/dcx6pQe.jpeg)
 ![Pale Moon Theme example 2](https://i.imgur.com/6e7tTdx.jpeg)
+
+
+There are some minor UI issues that I am working on fixing but it is taking me some time becasue I don't know what I am doing lol. –-----------------–-----------------–-----------------–-----------------–-----------------–-----------------–-----------------–---------------- 
+I will show some of you guys the issues that are happening below so you know what's happening.  
+–-----------------–-----------------–-----------------–-----------------–-----------------–-----------------–-----------------–----------------
+A good majority of the original files are there including some of the png files, feel free to help out any way that you can.
+–-----------------–-----------------–-----------------–-----------------–-----------------–-----------------–-----------------–----------------
+
+1. Show all downloads button has missing BG and or background isn't fully covering.
+2. Open Containing folder startcap for the button being hidden/non existant specifically here. Looks fine other places.
+3. URL bar should mimic the search bar and have a transparent background and not this white/off-white color.
+
+![Pale Moon Issues 1](https://www.reddit.com/media?url=https%253A%252F%252Fpreview.redd.it%252Fissue-with-buttons-v0-sty3lq95dplf1.jpg)
+![Pale Moon issues 2](https://www.reddit.com/media?url=https%253A%252F%252Fpreview.redd.it%252Fissue-with-buttons-v0-cajxnqs5dplf1.jpg)
+![Pale Moon issues 3](https://www.reddit.com/media?url=https%253A%252F%252Fpreview.redd.it%252Fissue-with-buttons-v0-2mxgx6n6dplf1.jpg)
