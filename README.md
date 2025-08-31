@@ -15,7 +15,7 @@ There are some minor UI issues that I am working on fixing but it is taking me s
 –-----------------–-----------------–-----------------–-----------------–-----------------–-----------------–-----------------–----------------------------
 
 1. Show all downloads button has missing BG and or background isn't fully covering.
-2. Open Containing folder startcap for the button being hidden/non existant specifically here. Looks fine other places. (outlined in red)
+2. Open Containing folder startcap for the button being hidden/non existant specifically here. Looks fine other places. (outlined in red in linked photo)
 3. URL bar should mimic the search bar and have a transparent background and not this white/off-white color.
 
 ![Pale Moon Issues 1](https://i.imgur.com/x536zRE.jpeg)
